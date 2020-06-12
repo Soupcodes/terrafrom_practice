@@ -10,5 +10,5 @@ resource "aws_instance" "tf_ec2" {
 
 resource "aws_eip" "tf_elastic_ip" {
   vpc = true
-  instance = ${aws_instance.tf_ec2.id}
+  instance = aws_instance.tf_ec2.id
 }
